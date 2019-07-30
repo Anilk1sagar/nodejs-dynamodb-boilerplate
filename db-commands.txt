@@ -1,0 +1,9 @@
+## Start Dynamodb
+cd (go to dynamo db folder)
+java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb -port 8000
+
+## Check tables
+aws dynamodb list-tables --endpoint-url http://localhost:8000
+
+## Check table data
+aws dynamodb describe-table --table-name movies

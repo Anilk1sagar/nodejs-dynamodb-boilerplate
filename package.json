@@ -1,0 +1,47 @@
+{
+  "name": "nodejs-dynamodb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "SET NODE_ENV=local && cross-env NODE_ENV=local && nodemon src/dynamoDb_backend.js --exec babel-node",
+    "create-table": "babel-node src/dynamodb/db/movie.js",
+    "delete-table": "babel-node src/dynamodb/db/deleteTable.js",
+    "load-movieData": "babel-node src/dynamodb/interface/movie.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anil Sagar",
+  "license": "ISC",
+  "devDependencies": {
+    "aws-sdk": "^2.361.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "cross-env": "^5.2.0",
+    "nodemon": "^1.18.3"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "dotenv": "^6.0.0",
+    "dotenv-safe": "^6.0.0",
+    "express": "^4.16.3",
+    "express-boom": "^2.0.0",
+    "express-jwt": "^5.3.1",
+    "express-jwt-permissions": "^1.2.1",
+    "express-validator": "^5.3.0",
+    "express-winston": "^2.6.0",
+    "lodash": "^4.17.10",
+    "method-override": "^3.0.0",
+    "mkdirp": "^0.5.1",
+    "moment": "^2.22.2",
+    "morgan": "^1.9.0",
+    "querystring": "^0.2.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2",
+    "util": "^0.11.0",
+    "uuid": "^3.3.2",
+    "winston": "^3.0.0",
+    "winston-daily-rotate-file": "^3.3.0"
+  }
+}
